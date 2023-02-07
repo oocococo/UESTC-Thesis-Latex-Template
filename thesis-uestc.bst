@@ -239,7 +239,7 @@ FUNCTION {format.chinese.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{f.~}{vv~}{ll}{, jj}"
+      "{vv~}{ll}{, jj}{f{ }}"
       format.name$
       % bibinfo bibinfo.check
       't :=
@@ -264,10 +264,9 @@ FUNCTION {format.chinese.names}
               'skip$
               { "," * }
               if$
-              "," *
               t "others" =
                 {
-                  " " * bbl.deng *
+                  "," * bbl.deng *
                 }
                 { " " * t * }
               if$
